@@ -1,0 +1,13 @@
+1641262815599	Rename package 'com.microservicio.proof.app.exam.models.controller'
+1641262823420	Rename package 'com.microservicio.proof.app.exam.models.entity'
+1641262834735	Rename package 'com.microservicio.proof.app.exam.models.repository'
+1641262843533	Rename package 'com.microservicio.proof.app.exam.models.services'
+1641310713573	Rename type 'Exams'
+1641310721096	Rename type 'Questions'
+1641339229908	Copy package
+1641339418257	Delete element
+1641427325063	Copy compilation unit
+1641427392946	Rename type 'subjectRepository'
+1641568533362	Copy packages
+1641608332111	Rename package 'com.microservicio.proof.app.examen.models.controller'
+1641608341500	Rename package 'com.microservicio.proof.app.examen.models.services'

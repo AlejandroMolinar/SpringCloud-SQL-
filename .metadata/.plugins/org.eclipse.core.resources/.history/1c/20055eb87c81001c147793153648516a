@@ -1,0 +1,66 @@
+spring.application.name=microservicio-gateway
+server.port=8090
+
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+#--------------------Configuration Access Angular------------------------#
+# Es una configuracion para dar acceso a las solicitudes de peticiones, ya sea, listar, get, put, entre otros #
+
+spring.cloud.gateway.globalcors.cors-configurations.'[/**]'.allowed-origins[0]: 'http://localhost:4200'
+
+
+              - 
+            allowedHeaders: 
+              - Content-Type
+            allowedMethods: 
+#------------------------------------------------------------------------#
+spring.cloud.gateway.routes[0].id=microservicio-usuario
+spring.cloud.gateway.routes[0].uri= lb://microservicio-usuario
+spring.cloud.gateway.routes[0].predicates=Path= /api/usuarios/** 
+spring.cloud.gateway.routes[0].filters=StripPrefix=2						
+# StripPrefix -> Cantidad de prefijos que tiene el Path, es decir, /api (1) /usuario (2) #
+#------------------------------------------------------------------------#
+
+spring.cloud.gateway.routes[1].id=microservicio-curso
+spring.cloud.gateway.routes[1].uri= lb://microservicio-curso
+spring.cloud.gateway.routes[1].predicates=Path= /api/cursos/** 
+spring.cloud.gateway.routes[1].filters=StripPrefix=2						
+
+#------------------------------------------------------------------------#
+spring.cloud.gateway.routes[2].id=microservicio-examen
+spring.cloud.gateway.routes[2].uri= lb://microservicio-examen
+spring.cloud.gateway.routes[2].predicates=Path= /api/examenes/** 
+spring.cloud.gateway.routes[2].filters=StripPrefix=2						
+
+#------------------------------------------------------------------------#
+spring.cloud.gateway.routes[3].id=microservicio-respuesta
+spring.cloud.gateway.routes[3].uri= lb://microservicio-respuesta
+spring.cloud.gateway.routes[3].predicates=Path= /api/respuestas/** 
+spring.cloud.gateway.routes[3].filters=StripPrefix=2						
+
+#------------------------------------------------------------------------#
+
+#Desactivar el Ribbon por que ya esta asociada el Balanceo de Cargas #
+spring.cloud.loadbalancer.ribbon.enabled=false
+
+
+
+#--------------------Configuration Access Angular------------------------#
+# opcion 1 #
+# Para agregar mas Direciones o Enlaces
+# ['http://localhost:4200', 'http://localhost:8080']
+# 
+# opcion 1 #
+# allowedOrigins:
+#   - 'http://localhost:4200'
+#   - 'http://localhost:8080'
+#---------------------------------------------------------
+# 
+# allowedOrigins  -> Permitir Origenes o urls
+# allowedHeaders  -> Permitir Cabeceras (como tablas, entre otros)
+# allowedMethods  -> Permitir Metodos (get, put, post, delete)
+
+
+
+
+
+

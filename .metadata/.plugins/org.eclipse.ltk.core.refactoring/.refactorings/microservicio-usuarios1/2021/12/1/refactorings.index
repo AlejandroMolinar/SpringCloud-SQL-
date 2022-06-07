@@ -1,0 +1,33 @@
+1640490190641	Delete element
+1640552743458	Delete element
+1640553652411	Rename type 'ServiceStudentImpl'
+1640553672735	Rename type 'ServiceStudent'
+1640563132635	Rename local variable 'opStu'
+1640618729214	Move source folder
+1640618943557	Delete elements
+1640619218702	Delete elements
+1640705142840	Delete element
+1640875873308	Copy compilation units
+1640909437467	Copy compilation unit
+1640909848719	Rename type 'Student'
+1640909927428	Rename type 'E'
+1640910055267	Rename type 'Student'
+1640910093995	Rename type 'E'
+1640910187586	Rename type 'Student'
+1640910211830	Rename type 'E'
+1640914444339	Rename package 'com.microservicios.proof.app.usuarios.models.entity'
+1640914462387	Rename package 'com.microservicios.proof.app.usuarios.models.repository'
+1640922341222	Rename package 'com.microservicios.proof.app.usuarios.entity'
+1640922356422	Rename package 'com.microservicios.proof.app.usuarios.controller'
+1640922371784	Copy packages
+1640922429524	Rename package 'com.microservicios.proof.app.usuarios.repository'
+1640922491746	Rename type 'Student'
+1640923100245	Rename type 'StudentRepository'
+1640959412848	Move compilation unit
+1640959443095	Move compilation unit
+1640959501627	Move compilation units
+1640959513132	Move compilation units
+1640959539107	Move compilation unit
+1640959543767	Move compilation unit
+1640961276147	Move package
+1640962811462	Rename package 'com.microservicios.proof.app.usuarios.services'

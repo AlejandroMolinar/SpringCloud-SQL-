@@ -1,0 +1,19 @@
+1640922414191	Rename package 'com.microservicios.proof.app.usuarios.repository'
+1640959423028	Move compilation unit
+1640959447278	Move compilation unit
+1640959485457	Copy compilation units
+1640959497177	Delete elements
+1640959535435	Move compilation unit
+1640959885883	Rename package 'com.microservicios.proof.app.usuarios.models.controller'
+1640959901901	Rename package 'com.microservicios.proof.app.usuarios.models.entity'
+1640959916976	Rename package 'com.microservicios.proof.app.usuarios.models.repository'
+1640959928951	Rename package 'com.microservicios.proof.app.usuarios.services'
+1640959983403	Rename type 'StudentController'
+1640960000917	Rename type 'StudentService'
+1640960011593	Rename type 'StudentServiceImpl'
+1640960547240	Rename local variable 'opStu'
+1640960552630	Rename local variable 'opCOur'
+1640962104766	Rename package 'com.microservicios.proof.app.cursos'
+1640962399353	Move package
+1640962693244	Rename package 'com.microservicios.proof.commons.courses.models.entity'
+1640962791752	Rename package 'com.microservicios.proof.app.courses.services'

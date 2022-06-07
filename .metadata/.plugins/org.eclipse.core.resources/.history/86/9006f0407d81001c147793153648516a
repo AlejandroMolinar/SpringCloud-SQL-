@@ -1,0 +1,33 @@
+# Es una configuracion para dar acceso a las solicitudes de peticiones, ya sea, listar, get, put, entre otros #
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: 
+              - 'http://localhost:4200'
+            allowedHeaders: 
+              - Content-Type
+            allowedMethods: 
+              - GET
+              - POST
+              - PUT
+              - DELETE
+          
+          
+          
+# opcion 1 #
+# Para agregar mas Direciones o Enlaces
+# ['http://localhost:4200', 'http://localhost:8080']
+# 
+# opcion 1 #
+# allowedOrigins:
+#   - 'http://localhost:4200'
+#   - 'http://localhost:8080'
+#---------------------------------------------------------
+# 
+# allowedOrigins  -> Permitir Origenes o urls
+# allowedHeaders  -> Permitir Cabeceras (como tablas, entre otros)
+# allowedMethods  -> Permitir Metodos (get, put, post, delete)

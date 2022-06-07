@@ -1,0 +1,7 @@
+1641260402815	Rename package 'com.microservicio.proof.app.courses.models.entity'
+1641260425166	Rename package 'com.microservicio.proof.app.courses.models.repository'
+1641260439149	Rename package 'com.microservicio.proof.app.courses.models.controller'
+1641260457009	Rename package 'com.microservicio.proof.app.courses.models.services'
+1641310698184	Rename type 'Courses'
+1641608298260	Rename package 'com.microservicio.proof.app.curso.models.controller'
+1641608311380	Rename package 'com.microservicio.proof.app.curso.models.services'

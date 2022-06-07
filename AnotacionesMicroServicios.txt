@@ -1,0 +1,114 @@
+GET	-> Leer en la BBDD
+POST	-> Agregar en la BBDD	
+PUT	-> Modificar elemento en la BBDD
+DELETE	-> Eliminar elemento de la BBDD
+
+BALANCEADOR_TEST -> Cambiar Valor y crear mas Instancias del mismo microservicio
+
+Click derecho en El proyecto (Ej: Microservicio Curso) > Run As> Run Configurations>
+Seleciones el proyecto (Curso) > Evironment> Crear un Valor/ Add > 
+
+Name: BALANCEADOR_TEST
+Value: Nombre que le quieras dar 
+
+Cambiar un elemento Id SQL a autoincrementable
+select setval('public.students_id_seq', 10);
+
+https://get.enterprisedb.com/postgresql/postgresql-14.1-1-windows-x64.exe
+https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-5.0.5-signed.msi
+
+//-----------------------------------------------------------------------------------   
+Body --> raw --> JSON
+/api/NombreTablaBBDD/
+//-----------------------------------------------------------------------------------   
+localhost:8090/api/usuarios/...
+{
+  	"name" : "Maria",
+	"lastName" : "Gerrero",
+	"email"	: "Magiagerrero@mail.com"
+}
+
+//-----------------------------------------------------------------------------------   
+localhost:8090/api/cursos/...
+
+{
+  	"name" : "1° Primaria"
+}
+
+localhost:8090/api/cursos/"id"/"Operacion"
+Ej:
+localhost:8090/api/cursos/3/add-student
+localhost:8090/api/cursos/3/remove-student
+
+[
+ {
+   	"name" = "Maria"
+	"lastName" = "Gerrero"
+	"email"	= "Magiagerrero@mail.com"
+ }
+
+]
+
+localhost:8090/api/examenes/...
+
+{
+   	"name" : "Historia"
+	"questions": {
+			}
+	
+ }
+//-----------------------------------------------------------------------------------  
+localhost:8090/api/respuestas
+[
+ {
+   	"content" : "Respuesta",
+	"student" : [
+			 {
+				"id" : "1",
+   				"name" : "Maria",
+				"lastName" : "Gerrero",
+				"email"	: "Magiagerrero@mail.com",
+				"dateCreate" : "2022-01-04 11:07:14.000000"
+ 			}			
+		],
+	"question" : [
+			{
+				"id" : "1",
+   				"content" : "Pregunta",
+				"exam" : "null",	
+			}
+		]
+	
+ }
+
+]
+
+PD: Pueden haber varias respuestas pero solo puede haber una pregunta y un estudiente, porque es @ManyToOne 
+
+//-----------------------------------------------------------------------------------   
+
+localhost:8090/api/usuarios/pageable?page=0&size=3
+				      /      /
+		        Pagina actual      tamaño maximo de elementos en cada paginación 
+//----------------------------------------------------------------------------------- 
+localhost:8090/api/usuarios/{id}
+localhost:8090/api/usuarios/search-name/{name}
+localhost:8090/api/usuarios/create-by-image
+localhost:8090/api/usuarios/update-by-image/{id}
+
+//-----------------------------------------------------------------------------------   
+localhost:8090/api/cursos/{id}
+localhost:8090/api/cursos/courses-student/{id}
+localhost:8090/api/cursos/{id}/remove-student
+localhost:8090/api/cursos/{id}/add-exams
+localhost:8090/api/cursos/{id}/remove-exams
+
+//-----------------------------------------------------------------------------------   
+localhost:8090/api/examenes/{id}
+localhost:8090/api/examenes/filter/{id}
+localhost:8090/api/examenes/subjects
+
+//-----------------------------------------------------------------------------------  
+localhost:8090/api/respuestas
+localhost:8090/api/respuestas/student/{studentId}/exam/{examId}
+localhost:8090/api/respuestas/student/{studentId}/exam-answered
